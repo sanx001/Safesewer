@@ -34,6 +34,8 @@ app.get("/api/sensor-data", (req, res) => {
   res.json(sensorData);
 });
 
-app.listen(5000, "0.0.0.0", () => {
-  console.log("SafeSewer backend running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`SafeSewer backend running on port ${PORT}`);
 });
